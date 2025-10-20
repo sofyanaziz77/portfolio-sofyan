@@ -1,0 +1,566 @@
+<!-- <!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sofyan Aziz — Portofolio</title>
+  <meta name="description" content="Portofolio sederhana dark-mode untuk Sofyan Aziz. HTML + CSS dasar, responsif, mudah diedit." />
+  <style>
+    /* Reset sederhana */
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0b0f13; /* very dark */
+      --card:#111418;
+      --muted:#9aa3ad;
+      --accent:#6ee7b7; /* soft teal */
+      --glass:rgba(255,255,255,0.03);
+      --shadow:0 6px 18px rgba(2,6,10,0.7);
+      --radius:12px;
+      --maxw:1000px;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%}
+    body{
+      background:linear-gradient(180deg,var(--bg),#060708 120%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      padding:32px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    /* Header / Hero */
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:24px;
+      align-items:center;
+      margin-bottom:22px;
+    }
+    .hero-left{flex:1}
+    .name{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .tagline{color:var(--muted);margin-top:6px}
+    .cta{margin-top:14px;display:flex;gap:10px}
+    .btn{
+      background:linear-gradient(90deg, rgba(110,231,183,0.12), rgba(110,231,183,0.06));
+      border:1px solid rgba(110,231,183,0.14);
+      color:var(--accent);
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;font-weight:600;font-size:14px;
+    }
+    .hero-right{
+      width:140px;min-height:140px;display:flex;align-items:center;justify-content:center;
+      background:var(--glass);border-radius:12px;border:1px solid rgba(255,255,255,0.03);
+      color:var(--muted);font-weight:600;font-size:13px;
+    }
+
+    /* Grid layout for sections */
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03);
+      box-shadow:var(--shadow);
+    }
+
+    h3{margin-bottom:10px}
+    p.small{color:var(--muted);font-size:14px}
+
+    /* Skills */
+    .skills{display:flex;gap:10px;flex-wrap:wrap}
+    .skill{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.02);font-weight:600}
+
+    /* Projects list */
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);}
+    .project-title{font-weight:700}
+    .project-desc{color:var(--muted);margin-top:6px;font-size:14px}
+
+    /* Sidebar contact */
+    .contact-list{display:flex;flex-direction:column;gap:10px}
+    .contact-item{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    .muted{color:var(--muted);font-size:13px}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      .hero{flex-direction:column;align-items:flex-start}
+      .hero-right{width:100%;height:80px}
+    }
+
+    /* Utilities */
+    .mb-8{margin-bottom:8px}
+    .mt-6{margin-top:6px}
+  </style>
+</head> -->
+<!-- <body>
+  <main class="container">
+    <!-- HERO 
+    <section class="hero">
+      <div class="hero-left">
+        <div class="name">SOFYAN AZIZ A</div>
+        <div class="tagline">Mahasiswa Manajemen | Creative Learner</div>
+        <div class="mt-6">
+          <p class="small">Saya adalah mahasiswa yang antusias dalam belajar dan memiliki minat besar pada dunia ekonomi dan bismis. Saya suka mengembangkan diri melalui pengalaman baru dan kolaborasi tim.</p>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#projects">Lihat Proyek</a>
+          <a class="btn" href="#Kontak">Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        Profil tanpa foto
+      </div>
+    </section>
+
+    <!-- CONTENT 
+    <div class="grid">
+      <section>
+        <!-- ABOUT 
+        <div class="card mb-8">
+          <h3>Tentang Saya</h3>
+          <p class="small">Mahasiswa yang tertarik pada pengelolaa kneuangan sebuah perusahan. Aktif dalam organisasi kampus dan beberapa kegiatan pengabdian masyarakat.</p>
+        </div>
+
+        <!-- SKILLS 
+        <div class="card mb-8">
+          <h3>Keahlian</h3>
+          <div class="skills mt-6">
+            <span class="skill">ANALISIS</span>
+            <span class="skill">EKONOMI</span>
+            <span class="skill">Canva</span>
+            <span class="skill">Microsoft Word</span>
+            <span class="skill">Presentasi</span>
+          </div>
+        </div>
+
+        <!-- PROJECTS 
+        <div class="card" id="projects">
+          <h3>Proyek &amp; Aktivitas</h3>
+          <div class="projects mt-6">
+            <article class="project">
+              <div class="project-title">Proyek Contoh #1 — Website Informasi Kegiatan</div>
+              <div class="project-desc">Membuat desain dan struktur website sederhana untuk menyajikan informasi kegiatan organisasi kampus.</div>
+            </article>
+            <article class="project">
+              <div class="project-title">Aktivitas Pengabdian Masyarakat</div>
+              <div class="project-desc">Terlibat dalam program kepedulian sosial dan pengumpulan donasi di lingkungan kampus.</div>
+            </article>
+            <!-- Tambah proyek di sini 
+          </div>
+        </div>
+      </section>
+
+      <!-- SIDEBAR 
+      <aside>
+        <div class="card mb-8" id="Kontak">
+          <h3>Kontak</h3>
+          <div class="contact-list mt-6">
+            <div class="contact-item">
+              <div class="muted">Email</div>
+              <div>yourname@example.com</div>
+            </div>
+            <div class="contact-item">
+              <div class="muted">Instagram</div>
+              <div>@username</div>
+            </div>
+            <div class="contact-item">
+              <div class="muted">Lokasi</div>
+              <div>Purwokerto, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Pendidikan</h3>
+          <div class="mt-6 small muted">S1 — Manajemen &amp;  (Sedang berjalan)</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> SOFYAN AZIZ A • Portofolio sederhana
+    </footer>
+  </main>
+
+  <script>
+    // small script to set copyright year and smooth scroll
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+  </script>
+</body>
+</html> -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sofyan Aziz A — Portofolio</title>
+  <meta name="description" content="Portofolio sederhana dark-mode untuk Sofyan Aziz A. HTML + CSS dasar, responsif, mudah diedit." />
+  <style>
+    /* Reset sederhana */
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0b0f13; /* very dark */
+      --card:#111418;
+      --muted:#9aa3ad;
+      --accent:#6ee7b7; /* soft teal */
+      --glass:rgba(255,255,255,0.03);
+      --shadow:0 6px 18px rgba(2,6,10,0.7);
+      --radius:12px;
+      --maxw:1000px;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%}
+    body{
+      background:linear-gradient(180deg,var(--bg),#060708 120%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      padding:32px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    /* Header / Hero */
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:24px;
+      align-items:center;
+      margin-bottom:22px;
+    }
+    .hero-left{flex:1}
+    .name{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .tagline{color:var(--muted);margin-top:6px}
+    .cta{margin-top:14px;display:flex;gap:10px}
+    .btn{
+      background:linear-gradient(90deg, rgba(110,231,183,0.12), rgba(110,231,183,0.06));
+      border:1px solid rgba(110,231,183,0.14);
+      color:var(--accent);
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;font-weight:600;font-size:14px;
+    }
+    .hero-right{
+      width:140px;min-height:140px;display:flex;align-items:center;justify-content:center;
+      background:var(--glass);border-radius:12px;border:1px solid rgba(255,255,255,0.03);
+      color:var(--muted);font-weight:600;font-size:13px;
+    }
+
+    /* Grid layout for sections */
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03);
+      box-shadow:var(--shadow);
+    }
+
+    h3{margin-bottom:10px}
+    p.small{color:var(--muted);font-size:14px}
+
+    /* Skills */
+    .skills{display:flex;gap:10px;flex-wrap:wrap}
+    .skill{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.02);font-weight:600}
+
+    /* Projects list */
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);}
+    .project-title{font-weight:700}
+    .project-desc{color:var(--muted);margin-top:6px;font-size:14px}
+
+    /* Sidebar contact */
+    .contact-list{display:flex;flex-direction:column;gap:10px}
+    .contact-item{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    .muted{color:var(--muted);font-size:13px}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Jadwal Styles */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    
+    .schedule-table th {
+      background: rgba(110, 231, 183, 0.1);
+      color: var(--accent);
+      padding: 12px 8px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .schedule-table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 13px;
+    }
+    
+    .schedule-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .schedule-table tr:hover {
+      background: rgba(255,255,255,0.02);
+    }
+    
+    .time-cell {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    
+    .course-cell {
+      font-weight: 500;
+    }
+    
+    .day-header {
+      background: rgba(110, 231, 183, 0.05);
+      color: var(--accent);
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin: 15px 0 8px 0;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      .hero{flex-direction:column;align-items:flex-start}
+      .hero-right{width:100%;height:80px}
+      .schedule-table {
+        font-size: 12px;
+      }
+      .schedule-table th,
+      .schedule-table td {
+        padding: 8px 6px;
+      }
+    }
+
+    /* Utilities */
+    .mb-8{margin-bottom:8px}
+    .mt-6{margin-top:6px}
+    .mt-12{margin-top:12px}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="name">SOFYAN AZIZ A</div>
+        <div class="tagline">Mahasiswa Manajemen | Creative Learner</div>
+        <div class="mt-6">
+          <p class="small">Saya adalah mahasiswa yang antusias dalam belajar dan memiliki minat besar pada dunia ekonomi dan bismis. Saya suka mengembangkan diri melalui pengalaman baru dan kolaborasi tim.</p>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#projects">Lihat Proyek</a>
+          <a class="btn" href="#jadwal">Lihat Jadwal</a>
+          <a class="btn" href="#Kontak">Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        Profil tanpa foto
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="grid">
+      <section>
+        <!-- ABOUT -->
+        <div class="card mb-8">
+          <h3>Tentang Saya</h3>
+          <p class="small">Mahasiswa yang tertarik pada pengelolaa kneuangan sebuah perusahan. Aktif dalam organisasi kampus dan beberapa kegiatan pengabdian masyarakat.</p>
+        </div>
+
+        <!-- JADWAL KULIAH -->
+        <div class="card mb-8" id="jadwal">
+          <h3>Jadwal Kuliah</h3>
+          <p class="small mt-6">Jadwal perkuliahan semester berjalan</p>
+          
+          <div class="day-header">SENIN</div>
+          <table class="schedule-table">
+            <tr>
+              <td class="time-cell">08:00 - 10:30</td>
+              <td class="course-cell">Manajemen Keuangan</td>
+              <td class="muted">Ruang A301</td>
+            </tr>
+            <tr>
+              <td class="time-cell">13:00 - 15:30</td>
+              <td class="course-cell">Ekonomi Mikro</td>
+              <td class="muted">Ruang B205</td>
+            </tr>
+          </table>
+
+          <div class="day-header">SELASA</div>
+          <table class="schedule-table">
+            <tr>
+              <td class="time-cell">09:00 - 11:30</td>
+              <td class="course-cell">Akuntansi Biaya</td>
+              <td class="muted">Ruang C102</td>
+            </tr>
+            <tr>
+              <td class="time-cell">14:00 - 16:30</td>
+              <td class="course-cell">Manajemen Strategik</td>
+              <td class="muted">Ruang A301</td>
+            </tr>
+          </table>
+
+          <div class="day-header">RABU</div>
+          <table class="schedule-table">
+            <tr>
+              <td class="time-cell">10:00 - 12:30</td>
+              <td class="course-cell">Pemasaran Digital</td>
+              <td class="muted">Lab Komputer 1</td>
+            </tr>
+          </table>
+
+          <div class="day-header">KAMIS</div>
+          <table class="schedule-table">
+            <tr>
+              <td class="time-cell">08:30 - 11:00</td>
+              <td class="course-cell">Manajemen Sumber Daya Manusia</td>
+              <td class="muted">Ruang B105</td>
+            </tr>
+            <tr>
+              <td class="time-cell">13:30 - 16:00</td>
+              <td class="course-cell">Kewirausahaan</td>
+              <td class="muted">Ruang A201</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="card mb-8">
+          <h3>Keahlian</h3>
+          <div class="skills mt-6">
+            <span class="skill">ANALISIS</span>
+            <span class="skill">EKONOMI</span>
+            <span class="skill">Canva</span>
+            <span class="skill">Microsoft Word</span>
+            <span class="skill">Presentasi</span>
+            <span class="skill">Manajemen Waktu</span>
+            <span class="skill">Penelitian</span>
+          </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="card" id="projects">
+          <h3>Proyek &amp; Aktivitas</h3>
+          <div class="projects mt-6">
+            <article class="project">
+              <div class="project-title">Proyek Contoh #1 — Website Informasi Kegiatan</div>
+              <div class="project-desc">Membuat desain dan struktur website sederhana untuk menyajikan informasi kegiatan organisasi kampus.</div>
+            </article>
+            <article class="project">
+              <div class="project-title">Aktivitas Pengabdian Masyarakat</div>
+              <div class="project-desc">Terlibat dalam program kepedulian sosial dan pengumpulan donasi di lingkungan kampus.</div>
+            </article>
+            <article class="project">
+              <div class="project-title">Studi Kasus Manajemen Keuangan</div>
+              <div class="project-desc">Analisis laporan keuangan perusahaan dan memberikan rekomendasi strategi pengelolaan yang efektif.</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div class="card mb-8" id="Kontak">
+          <h3>Kontak</h3>
+          <div class="contact-list mt-6">
+            <div class="contact-item">
+              <div class="muted">Email</div>
+              <div>sofyan.aziz@email.com</div>
+            </div>
+            <div class="contact-item">
+              <div class="muted">WhatsApp</div>
+              <div>+62 812-3456-7890</div>
+            </div>
+            <div class="contact-item">
+              <div class="muted">Instagram</div>
+              <div>@sofyanaziz</div>
+            </div>
+            <div class="contact-item">
+              <div class="muted">Lokasi</div>
+              <div>Purwokerto, Indonesia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-8">
+          <h3>Pendidikan</h3>
+          <div class="mt-6">
+            <div class="muted">S1 — Manajemen</div>
+            <div class="small mt-6">Universitas Amikom Purwokerto</div>
+            <div class="muted mt-6">2023 - Sekarang</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Organisasi</h3>
+          <div class="mt-6">
+            <div class="muted">Himpunan Mahasiswa Manajemen</div>
+            <div class="small mt-6">Anggota Divisi Keuangan</div>
+            <div class="muted mt-6">2023 - Sekarang</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> SOFYAN AZIZ A • Portofolio sederhana
+    </footer>
+  </main>
+
+  <script>
+    // small script to set copyright year and smooth scroll
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
